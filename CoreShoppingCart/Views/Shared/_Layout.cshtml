@@ -320,12 +320,13 @@
                 </div>
             </nav>
             <div class="container">
+                @await Component.InvokeAsync("Cat")
+            </div>
+            <div class="container">
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>
             </div>
-
-           
         </div>
         <!-- page-body-wrapper ends -->
     </div>

@@ -108,6 +108,7 @@ namespace CoreShoppingCart.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,  Product product)
         {
+            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", product.CategoryId);
             if (id != product.Pid)
             {
                 return NotFound();

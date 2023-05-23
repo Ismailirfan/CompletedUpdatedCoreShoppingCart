@@ -164,6 +164,9 @@
 		</div>
 		<!-- /container -->
 	</nav>
+	<div class="container">
+		@await Component.InvokeAsync("Cat")
+	</div>
     <div>
         @RenderBody()
     </div>
